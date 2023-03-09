@@ -22,7 +22,7 @@ module "labels" {
 # Description : This terraform module is used for requesting or importing SSL/TLS
 #               certificate with validation.
 resource "aws_acm_certificate" "import-cert" {
-  count = var.enable_acm_certificate && var.import_certificate && string_body ? 1 : 0
+  count = var.enable_acm_certificate && var.import_certificate && var.string_body ? 1 : 0
 
 #  private_key            = file(var.private_key)
 #  certificate_body       = file(var.certificate_body)
