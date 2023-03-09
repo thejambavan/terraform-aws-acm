@@ -29,10 +29,10 @@ resource "aws_acm_certificate" "import-cert" {
 #  certificate_chain      = file(var.certificate_chain)
 
 # String versions 
-  private_key_data       = var.private_key
-  certificate_body_data  = var.certificate_body
-  certificate_chain_data = var.certificate_chain
-  tags                   = module.labels.tags
+  private_key       = var.private_key
+  certificate_body  = var.certificate_body
+  certificate_chain = var.certificate_chain
+  tags              = module.labels.tags
   lifecycle {
     create_before_destroy = true
   }
