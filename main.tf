@@ -24,10 +24,14 @@ module "labels" {
 resource "aws_acm_certificate" "import-cert" {
   count = var.enable_acm_certificate && var.import_certificate ? 1 : 0
 
-  private_key       = file(var.private_key)
-  certificate_body  = file(var.certificate_body)
-  certificate_chain = file(var.certificate_chain)
-  tags              = module.labels.tags
+  private_key            = file(var.private_key)
+  certificate_body       = file(var.certificate_body)
+  certificate_chain      = file(var.certificate_chain)
+# String versions 
+  private_key_data       = var.private_key
+  certificate_body_data  = var.certificate_body
+  certificate_chain_data = var.certificate_chain
+  tags                   = module.labels.tags
   lifecycle {
     create_before_destroy = true
   }

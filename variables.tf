@@ -93,6 +93,24 @@ variable "certificate_chain" {
   description = "Path of certificate chain."
 }
 
+variable "private_key_data" {
+  type        = string
+  default     = ""
+  description = "Private key."
+}
+
+variable "certificate_body_data" {
+  type        = string
+  default     = "~"
+  description = "Certificate body."
+}
+
+variable "certificate_chain_data" {
+  type        = string
+  default     = ""
+  description = "Certificate chain."
+}
+
 variable "validate_certificate" {
   type        = bool
   default     = false
