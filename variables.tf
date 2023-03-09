@@ -110,6 +110,11 @@ variable "certificate_chain_data" {
   default     = ""
   description = "Certificate chain."
 }
+variable "string_body" {
+  type        = bool
+  default     = false
+  description = "Set to true to use a string for cert/key/chain body."
+}
 
 variable "validate_certificate" {
   type        = bool
