@@ -2,18 +2,9 @@
 # package ecosystems to update and where the package manifests are located.
 # Please see the documentation for all configuration options:
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    open-pull-requests-limit: 3
-    assignees:
-      - "clouddrove-ci"
-    reviewers:
-      - "approvers"
-
   - package-ecosystem: "terraform" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
@@ -24,11 +15,8 @@ updates:
     # Add reviewer
     reviewers:
       - "approvers"
-    # Allow up to 3 open pull requests for pip dependencies
-    open-pull-requests-limit: 3
-
   - package-ecosystem: "terraform" # See documentation for possible values
-    directory: "/examples/generate-certificate-dns" # Location of package manifests
+    directory: "_example/generate-certificate-dns" # Location of package manifests
     schedule:
       interval: "weekly"
     # Add assignees
@@ -37,11 +25,8 @@ updates:
     # Add reviewer
     reviewers:
       - "approvers"
-    # Allow up to 3 open pull requests for pip dependencies
-    open-pull-requests-limit: 3
-
   - package-ecosystem: "terraform" # See documentation for possible values
-    directory: "/examples/generate-certificate-email" # Location of package manifests
+    directory: "_example/generate-certificate-email" # Location of package manifests
     schedule:
       interval: "weekly"
     # Add assignees
@@ -50,11 +35,8 @@ updates:
     # Add reviewer
     reviewers:
       - "approvers"
-    # Allow up to 3 open pull requests for pip dependencies
-    open-pull-requests-limit: 3
-
   - package-ecosystem: "terraform" # See documentation for possible values
-    directory: "/examples/import-certificate" # Location of package manifests
+    directory: "_example/import-certificate" # Location of package manifests
     schedule:
       interval: "weekly"
     # Add assignees
@@ -63,5 +45,3 @@ updates:
     # Add reviewer
     reviewers:
       - "approvers"
-    # Allow up to 3 open pull requests for pip dependencies
-    open-pull-requests-limit: 3
