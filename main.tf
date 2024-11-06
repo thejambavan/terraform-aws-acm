@@ -7,9 +7,9 @@
 #              for resources. You can use terraform-labels to implement a strict naming
 #              convention.
 module "labels" {
-  source  = "clouddrove/labels/aws"
-  version = "1.3.0"
-
+  #source  = "clouddrove/labels/aws"
+  #version = "1.3.0"
+  source  = "git::https://github.com/thejambavan/terraform-aws-labels?ref=master"
   name        = var.name
   environment = var.environment
   managedby   = var.managedby
